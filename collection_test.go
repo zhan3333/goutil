@@ -5,7 +5,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"testing"
 
-	"util"
+	"github.com/zhan3333/go-util"
 )
 
 func TestCollect(t *testing.T) {

@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"testing"
 
-	"util"
+	"github.com/zhan3333/go-util"
 )
 
 func TestMap(t *testing.T) {
