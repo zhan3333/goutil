@@ -38,8 +38,8 @@ go 版本最低需要 go1.18beta1
     - Random()
     - Len()
     - Diff()
-- Map
-- Filter
-- Reduce
-- Sum
-- CountIf
+- Map()
+- Filter()
+- Reduce()
+- Sum()
+- CountIf()
