@@ -1,4 +1,4 @@
-module github.com/zhan3333/goutil
+module github.com/zhan3333/util
 
 go 1.18
 

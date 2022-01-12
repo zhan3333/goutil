@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/zhan3333/goutil"
+	"github.com/zhan3333/util"
 )
 
 func TestMap(t *testing.T) {
