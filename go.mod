@@ -1,4 +1,4 @@
-module util
+module github.com/zhan3333/go-util
 
 go 1.18
 
