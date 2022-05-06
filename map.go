@@ -1,6 +1,6 @@
 package util
 
-import "constraints"
+import "golang.org/x/exp/constraints"
 
 // Map 使用传入的方法循环处理传入的 arr slice, 并将结果合并为一个新的 slice 返回
 func Map[T1 any, T2 any](arr []T1, f func(T1) T2) []T2 {
