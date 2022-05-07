@@ -19,11 +19,11 @@ func TestMap(t *testing.T) {
 }
 
 func TestReduce(t *testing.T) {
-	assert.Equal(t, 6, util.Reduce([]int{1, 2, 3}, 0, func(o int, e int) int {
+	assert.Equal(t, 6, util.Reduce([]int{1, 2, 3}, func(o int, e int) int {
 		return o + e
 	}))
 
-	assert.Equal(t, "abc", util.Reduce([]string{"a", "b", "c"}, "", func(o string, e string) string {
+	assert.Equal(t, "abc", util.Reduce([]string{"a", "b", "c"}, func(o string, e string) string {
 		return o + e
 	}))
 }
@@ -52,4 +52,28 @@ func TestSum(t *testing.T) {
 	assert.Equal(t, "abc", util.Sum([]string{"a", "b", "c"}, func(t string) string {
 		return t
 	}))
+}
+
+func TestSort(t *testing.T) {
+	type args struct {
+		arr []int
+	}
+	tests := []struct {
+		name string
+		args args
+		want []int
+	}{
+		{
+			name: "sort",
+			args: args{
+				arr: []int{2, 5, 3, 4, 1},
+			},
+			want: []int{1, 2, 3, 4, 5},
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			assert.Equalf(t, tt.want, util.Sort(tt.args.arr), "Sort(%v)", tt.args.arr)
+		})
+	}
 }
