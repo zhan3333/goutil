@@ -135,7 +135,7 @@ func (s *Slice[T]) Contains(v T) bool {
 }
 
 func (s *Slice[T]) ContainsAll(vs ...T) bool {
-	return ContainsAll(s.Slice(), vs)
+	return ContainsAll(s.Slice(), vs...)
 }
 
 // ContainsCount 返回指定元素在集合中出现的次数
